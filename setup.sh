@@ -123,10 +123,6 @@ npm install
 
 
 # Uninstall packages
-echo "Cleaning up yum packages........................." 
-yum -y remove unzip
-yum -y remove wget
-yum -y remove git
 echo "============================"
 echo "You are in /opt/oracle/tools"   
 cd /opt/oracle/tools
