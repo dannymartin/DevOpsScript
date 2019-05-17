@@ -1,28 +1,27 @@
 # install JDK 
 yum -y install java-1.8.0-openjdk wget && rm -rf /var/cache/yum
-export JAVA_HOME=/usr/lib/jvm/java-openjdk
 
 # ==========================================
 # Install from yum
-echo "Installing EPEL, python-pip, unzip, libaio, oci_cli, requests, cx_Oracle"
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-yum -y install python-pip
-yum -y install unzip
-yum -y install libaio 
-yum -y install nodejs npm --enablerepo=epel
-yum -y install git
-yum -y install nano
-yum clean all
+#echo "Installing EPEL, python-pip, unzip, libaio, oci_cli, requests, cx_Oracle"
+#yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+#yum -y install python-pip
+#yum -y install unzip
+#yum -y install libaio 
+#yum -y install nodejs npm --enablerepo=epel
+#yum -y install git
+#yum -y install nano
+#yum clean all
 
 # install from pip
-echo 'installing oci_cli, requests, cx_Oracle'
-pip install oci_cli requests cx_Oracle
+#echo 'installing oci_cli, requests, cx_Oracle'
+#pip install oci_cli requests cx_Oracle
 
 # ==========================================
 # Setup oracle instant client and sqlcl
-ENV SQLPLUS oracle-instantclient12.2-sqlplus-12.2.0.1.0-1.x86_64.rpm
-ENV SQLCL sqlcl-18*.zip
-ENV INSTANT_CLIENT oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
+#ENV SQLPLUS oracle-instantclient12.2-sqlplus-12.2.0.1.0-1.x86_64.rpm
+#ENV SQLCL sqlcl-18*.zip
+#ENV INSTANT_CLIENT oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm
 
 # Make directories
 mkdir -p /opt/oracle/lib
@@ -37,11 +36,11 @@ mkdir -p /opt/oracle/database/wallet
 mkdir -p /opt/oracle/tools/oci
 
 #set env variables ****************** Take second look at
-export ORACLE_BASE=/opt/oracle/lib/instantclient_12_2
-export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib/:$LD_LIBRARY_PATH
-export TNS_ADMIN=/opt/oracle/database/wallet/
-export ORACLE_HOME=/opt/oracle/lib/instantclient_12_2
-export PATH=$PATH:/usr/lib/oracle/12.2/client64/bin:/opt/oracle/lib/sqlcl/bin
+#export ORACLE_BASE=/opt/oracle/lib/instantclient_12_2
+#export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib/:$LD_LIBRARY_PATH
+#export TNS_ADMIN=/opt/oracle/database/wallet/
+#export ORACLE_HOME=/opt/oracle/lib/instantclient_12_2
+#export PATH=$PATH:/usr/lib/oracle/12.2/client64/bin:/opt/oracle/lib/sqlcl/bin
 
 # ==========================================
 # install node app
