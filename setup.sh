@@ -1,5 +1,5 @@
 # install JDK 
-yum -y install java-1.8.0-openjdk wget && rm -rf /var/cache/yum
+#yum -y install java-1.8.0-openjdk wget && rm -rf /var/cache/yum
 
 # ==========================================
 # Install from yum
@@ -38,7 +38,7 @@ mkdir -p /opt/oracle/tools/oci
 #set env variables ****************** Take second look at
 #export ORACLE_BASE=/opt/oracle/lib/instantclient_12_2
 #export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib/:$LD_LIBRARY_PATH
-#export TNS_ADMIN=/opt/oracle/database/wallet/
+export TNS_ADMIN=/opt/oracle/database/wallet/
 #export ORACLE_HOME=/opt/oracle/lib/instantclient_12_2
 #export PATH=$PATH:/usr/lib/oracle/12.2/client64/bin:/opt/oracle/lib/sqlcl/bin
 
@@ -125,5 +125,4 @@ npm install
 echo "============================"
 echo "You are in /opt/oracle/tools"   
 cd /opt/oracle/tools
-
 
